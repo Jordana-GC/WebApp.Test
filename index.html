@@ -6,7 +6,7 @@
   <title>AR Web App</title>
   <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
   <script src="<https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js>"></script>
-  <script src="https://cdn.jsdelivr.net/npm/ar.js@3.4.0/aframe/build/aframe-ar.min.js"></script>
+  <script src="https://cdn.rawgit.com/jeromeetienne/ar.js/2.0.1/aframe/build/aframe-ar.min.js"></script>
   <style>
     body {
       margin: 0;
@@ -17,8 +17,7 @@
 <body>
   <!-- AR Scene -->
   <a-scene
-      embedded
-      arjs="sourceType: webcam ; videoTexture: true; debugUIEnabled: false;"
+      embedded arjs="sourceType: webcam ; videoTexture: true; debugUIEnabled: false;"
       ar-mode-ui="enabled: false"
       vr-mode-ui="enabled: false"
     >
