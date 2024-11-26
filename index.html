@@ -21,17 +21,14 @@
       ar-mode-ui="enabled: false"
       vr-mode-ui="enabled: false"
     >
-    <!-- Marker Definition -->
     <a-marker preset="hiro">
-      <!-- Dot -->
       <a-sphere 
         position="0 0.1 0" 
         radius="0.1" 
-        color="pink" 
+        color="red" 
         id="dot"
         class="clickable">
       </a-sphere>
-      <!-- Text Display (hidden initially) -->
       <a-text 
         value="" 
         position="0 0.5 0" 
@@ -41,15 +38,7 @@
       </a-text>
     </a-marker>
     <!-- AR Camera -->
-    <a-entity camera position="0 0 0" look-controls>
-        <a-entity 
-          cursor="fuse: false; rayOrigin: mouse" 
-          raycaster="objects: .clickable" 
-          position="0 0 -1" 
-          geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
-          material="color: black; shader: flat">
-        </a-entity>
-      </a-entity>
+    <a-entity camera position="0 0 0" look-controls></a-entity>
   </a-scene>
 
   <script>
