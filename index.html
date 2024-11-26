@@ -27,10 +27,11 @@
         radius="0.2" 
         color="red" 
         id="dot"
-        class="clickable">
+        class="clickable"
+        static-body>
       </a-sphere>
       <a-text 
-        value="" 
+        value="Slay"
         position="0 0.5 0" 
         color="black" 
         scale="2 2 2" 
@@ -39,13 +40,13 @@
     </a-marker>
     <!-- AR Camera -->
     <a-entity camera position="0 0 0" look-controls>
-      <a-cursor></a-cursor>
+      <a-cursor visible="false"></a-cursor>
     </a-entity>
   </a-scene>
 
   <script>
     // JavaScript to handle interaction
-    document.getElementById("#dot").addEventListener("click", function () {
+    document.querySelector("#dot").addEventListener("click", function () {
       const feedback = document.getElementById("feedback");
       feedback.setAttribute("value", "Well done");
       feedback.setAttribute("color", "green");
