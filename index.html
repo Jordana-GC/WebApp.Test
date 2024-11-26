@@ -31,7 +31,7 @@
         static-body>
       </a-sphere>
       <a-text 
-        value="Slay"
+        value=""
         position="0 0.5 0" 
         color="black" 
         scale="2 2 2" 
@@ -46,10 +46,18 @@
 
   <script>
     // JavaScript to handle interaction
-    document.querySelector("#dot").addEventListener("click", function () {
-      const feedback = document.getElementById("feedback");
+    const dot = document.querySelector("#dot");
+    const feedback = document.querySelector("#feedback");
+
+    // Add an event listener for raycaster intersection, which works better in AR.js for clickable objects
+    dot.addEventListener("raycaster-intersected", function () {
       feedback.setAttribute("value", "Well done");
       feedback.setAttribute("color", "green");
+    });
+
+    // Add event listener for raycaster intersection cleared (to reset the text if desired)
+    dot.addEventListener("raycaster-intersected-cleared", function () {
+      feedback.setAttribute("value", ""); // Clear text when no longer looking at it, optional
     });
   </script>
 </body>
