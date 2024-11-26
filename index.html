@@ -24,7 +24,7 @@
     <a-marker preset="hiro">
       <a-sphere 
         position="0 0.1 0" 
-        radius="0.1" 
+        radius="0.2" 
         color="red" 
         id="dot"
         class="clickable">
@@ -38,12 +38,14 @@
       </a-text>
     </a-marker>
     <!-- AR Camera -->
-    <a-entity camera position="0 0 0" look-controls></a-entity>
+    <a-entity camera position="0 0 0" look-controls>
+      <a-cursor></a-cursor>
+    </a-entity>
   </a-scene>
 
   <script>
     // JavaScript to handle interaction
-    document.getElementById("dot").addEventListener("click", function () {
+    document.getElementById("#dot").addEventListener("click", function () {
       const feedback = document.getElementById("feedback");
       feedback.setAttribute("value", "Well done");
       feedback.setAttribute("color", "green");
