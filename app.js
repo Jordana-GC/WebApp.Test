@@ -18,18 +18,60 @@ aframeScript.onload = () => {
     document.body.appendChild(scene);
 
     // Create the marker using a custom pattern file
-    const marker = document.createElement('a-marker');
-    marker.setAttribute('type', 'pattern');
-    marker.setAttribute('url', 'markers/pattern-module1.patt');  // Replace with your custom marker path
-    scene.appendChild(marker);
+    const marker1 = document.createElement('a-marker');
+    marker1.setAttribute('type', 'pattern');
+    marker1.setAttribute('url', 'markers\pattern-Module-1.patt');
+    scene.appendChild(marker1);
 
-    // Add a red sphere to the marker
-    const sphere = document.createElement('a-sphere');
-    sphere.setAttribute('position', '0 0.1 0');
-    sphere.setAttribute('radius', '0.1');
-    sphere.setAttribute('color', 'red');
-    sphere.setAttribute('id', 'interactiveSphere');
-    marker.appendChild(sphere);
+    // Add a sphere to the marker
+    const sphere1 = document.createElement('a-sphere');
+    sphere1.setAttribute('position', '0 0.1 0');
+    sphere1.setAttribute('radius', '0.1');
+    sphere1.setAttribute('color', 'red');
+    sphere1.setAttribute('id', 'interactiveSphere1');
+    marker1.appendChild(sphere1);
+
+     // Create the marker using a custom pattern file
+     const marker2 = document.createElement('a-marker');
+     marker2.setAttribute('type', 'pattern');
+     marker2.setAttribute('url', 'markers\pattern-Module-2.patt');
+     scene.appendChild(marker2);
+ 
+     // Add a sphere to the marker
+     const sphere2 = document.createElement('a-sphere');
+     sphere2.setAttribute('position', '0 0.1 0');
+     sphere2.setAttribute('radius', '0.1');
+     sphere2.setAttribute('color', 'green');
+     sphere2.setAttribute('id', 'interactiveSphere2');
+     marker2.appendChild(sphere2);
+
+     // Create the marker using a custom pattern file
+     const marker3 = document.createElement('a-marker');
+     marker3.setAttribute('type', 'pattern');
+     marker3.setAttribute('url', 'markers\pattern-Module-3.patt');
+     scene.appendChild(marker3);
+ 
+     // Add a sphere to the marker
+     const sphere3 = document.createElement('a-sphere');
+     sphere3.setAttribute('position', '0 0.1 0');
+     sphere3.setAttribute('radius', '0.1');
+     sphere3.setAttribute('color', 'pink');
+     sphere3.setAttribute('id', 'interactiveSphere3');
+     marker3.appendChild(sphere3);
+     
+     // Create the marker using a custom pattern file
+     const marker4 = document.createElement('a-marker');
+     marker4.setAttribute('type', 'pattern');
+     marker4.setAttribute('url', 'markers\pattern-Module-4.patt');
+     scene.appendChild(marker4);
+ 
+     // Add a sphere to the marker
+     const sphere4 = document.createElement('a-sphere');
+     sphere4.setAttribute('position', '0 0.1 0');
+     sphere4.setAttribute('radius', '0.1');
+     sphere4.setAttribute('color', 'black');
+     sphere4.setAttribute('id', 'interactiveSphere4');
+     marker4.appendChild(sphere4);
 
     // Add feedback text, initially empty
     const feedbackText = document.createElement('a-text');
@@ -38,7 +80,7 @@ aframeScript.onload = () => {
     feedbackText.setAttribute('color', 'black');
     feedbackText.setAttribute('scale', '2 2 2');
     feedbackText.setAttribute('id', 'feedbackText');
-    marker.appendChild(feedbackText);
+    marker1.appendChild(feedbackText);
 
     // Create the AR camera and cursor (invisible)
     const camera = document.createElement('a-entity');
@@ -50,7 +92,7 @@ aframeScript.onload = () => {
     camera.appendChild(cursor);
 
     // JavaScript for handling interactions
-    sphere.addEventListener('click', () => {
+    sphere1.addEventListener('click', () => {
       feedbackText.setAttribute('value', 'Well done!');
       feedbackText.setAttribute('color', 'green');
     });
