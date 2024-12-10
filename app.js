@@ -20,7 +20,7 @@ aframeScript.onload = () => {
     // Create the marker using a custom pattern file
     const marker1 = document.createElement('a-marker');
     marker1.setAttribute('type', 'pattern');
-    marker1.setAttribute('url', 'markers\pattern-Module-1.patt');
+    marker1.setAttribute('url', 'markers\pattern-marker.patt');
     scene.appendChild(marker1);
 
     // Add a sphere to the marker
